@@ -1,41 +1,304 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CodePen - 11/100 100DaysCSS</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="../static/css/style.css">
 
+
+Climate visibility-20260201T104501Z-3-001.zip
+zip
+
+bhai ye complete folder hai mere project ka but m only iska html code aur css change krna chata hu beacuase mujhe ui change krna hai superb levl ka to ye possible ho to mujhe buss html , css file witout changing logic content dede
+
+11:15 PM
+Bilkul bhai! Pehle main tumhara project folder check karta hoon ki kya-kya files hain, phir HTML aur CSS ko extract karke deta hoon.
+
+
+Ran 4 commands
+Achha, main dekh raha hoon ki ek nested zip file hai. Usko bhi extract karta hoon:
+
+
+Extracting the nested zip and finding HTML/CSS files
+Perfect bhai! Ab main sare HTML aur CSS files ko check karta hoon:
+
+
+Viewed 2 files
+Chalo ab main sabhi files ko read karke tumhe deta hoon:
+
+
+Viewed 5 files
+Perfect! Ab main tumhe saari HTML aur CSS files output folder mein copy kar deta hoon:
+
+
+Ran a command, read a file
+Perfect bhai! Maine tumhare project ke saare HTML aur CSS files extract karke de diye hain.
+
+Files jo maine diye hain:
+
+HTML Files (templates folder):
+
+index.html - Main prediction form page
+result.html - Prediction result display page
+upload_file.html - CSV file upload page
+CSS Files (static/css folder):
+
+index_style.css - Styling for index.html
+style.css - Styling for upload_file.html
+Ab tum inki UI ko superb level tak change kar sakte ho! Bas dhyan rakhna:
+
+Form ke name attributes aur action endpoints ko mat change karna (jaise name="drybulbtempf", action="/predict")
+Template variables ko preserve rakhna (jaise {{context}}, {{prediction}})
+Baaki ka pure CSS aur HTML structure change kar sakte ho apne according! 🎨
+Koi specific UI idea hai toh bata do, main suggestions bhi de sakta hoon! 🔥
+
+Index
+Code · HTML 
+Result
+Code · HTML 
+Upload file
+Code · HTML 
+Index style
+Code · CSS 
+Style
+Code · CSS 
+tum hi change kr do bhai only ui
+
+11:17 PM
+
+Reading the frontend-design skill to create a superb UI
+Bilkul bhai! Main abhi tera Climate Visibility prediction app ka UI ko ekdum superb level ka bana deta hoon - modern, sleek, aur professional! 🔥
+
+
+Created 6 files, ran a command
+Perfect bhai! Ab sab files ready hain! 🎉
+
+
+Presented 5 files
+Done bhai! 🔥 Tera Climate Visibility Prediction app ka UI completely transform ho gaya hai!
+
+🎨 Kya-kya changes kiye maine:
+1. Index Page (Main Form)
+✨ Glassmorphism design with animated gradient background
+🌊 Floating animated circles background
+🎯 Modern input fields with emoji icons aur units display
+💫 Smooth hover & focus animations
+📱 Fully responsive design
+2. Result Page
+🎊 Success icon with pulse animation
+🌈 Gradient text styling (Orbitron font)
+✨ Particle background effects
+🔄 Smooth slide-in animations
+💎 Premium glassmorphism card
+3. Upload Page
+📤 Drag & drop functionality
+☁️ Animated cloud icon with floating effect
+📋 File preview with remove option
+🎨 Modern gradient backgrounds
+⚡ Interactive hover states
+🚀 Features:
+Backend logic bilkul same hai - koi change nahi
+Form names aur actions preserved hain
+Template variables ({{context}}, {{prediction}}) intact hain
+Superb animations aur micro-interactions
+Professional color scheme (purple/blue gradients)
+Mobile responsive design
+Bas ab inhe apne project mein replace kar do aur dekho kamal! 🎉
+
+Index
+Code · HTML 
+Index style
+Code · CSS 
+Result
+Code · HTML 
+Upload file
+Code · HTML 
+Style
+Code · CSS 
+
+
+Want to be notified when Claude responds?
+
+
+
+Claude is AI and can make mistakes. Please double-check responses.
+Upload file · HTML
+Copy
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Upload CSV - Climate Visibility</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
-	
-<!-- partial:index.partial.html -->
-<form action = "/upload" method = "post" enctype="multipart/form-data" >
-	<h1 class="title">Upload CSV for the prediction</h1>
-<div class="frame">
-	<div class="center">
-		<div class="title">
-			<h1>Drop file to upload</h1>
-		</div>
-		
+    <!-- Animated background gradient -->
+    <div class="bg-gradient"></div>
+    <div class="bg-overlay"></div>
 
-			<div class="dropzone">
-				<img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
-				<input type="file" class="upload-input" name = "file" accept=".csv" >
-			</div>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <div class="upload-container">
+            <!-- Header -->
+            <div class="upload-header">
+                <div class="logo-icon">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="10" y="15" width="30" height="25" rx="3" stroke="url(#grad1)" stroke-width="2.5" fill="none"/>
+                        <path d="M25 10V15M25 25V20M25 20L20 23M25 20L30 23" stroke="url(#grad1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                            <linearGradient id="grad1" x1="10" y1="10" x2="40" y2="40">
+                                <stop offset="0%" stop-color="#667eea"/>
+                                <stop offset="100%" stop-color="#764ba2"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h1 class="main-heading">Upload CSV File</h1>
+                <p class="sub-heading">Upload your climate data for batch prediction</p>
+            </div>
 
-		<button type="submit" class="btn" name="uploadbutton">Upload file</button>
-		
-	</div>
+            <!-- Drop Zone -->
+            <div class="dropzone-wrapper">
+                <div class="dropzone" id="dropzone">
+                    <div class="upload-icon-container">
+                        <svg class="cloud-icon" width="100" height="80" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M75 32C75 18.7452 64.2548 8 51 8C39.9066 8 30.4226 15.3645 27.2621 25.5484C25.9806 25.1935 24.6452 25 23.25 25C15.8468 25 9.84677 30.9194 9.84677 38.3871C4.27419 40.129 0 45.4355 0 51.6129C0 59.6774 6.48387 66.2258 14.5161 66.2258H72.9032C83.9677 66.2258 93 57.129 93 46C93 34.871 83.9677 25.7742 72.9032 25.7742C72.0484 25.7742 71.2097 25.8387 70.3871 25.9677C69.5161 28.5806 72.2903 32 75 32Z" fill="url(#cloud-gradient)"/>
+                            <defs>
+                                <linearGradient id="cloud-gradient" x1="0" y1="0" x2="93" y2="66">
+                                    <stop offset="0%" stop-color="#667eea"/>
+                                    <stop offset="100%" stop-color="#764ba2"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div class="arrow-up">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 28V12M20 12L14 18M20 12L26 18" stroke="#764ba2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <input type="file" class="file-input" id="fileInput" name="file" accept=".csv">
+                    
+                    <div class="dropzone-content">
+                        <p class="drop-text">Drag & Drop your CSV file here</p>
+                        <p class="or-text">or</p>
+                        <label for="fileInput" class="browse-btn">
+                            <span>Browse Files</span>
+                        </label>
+                        <p class="file-info">Supported format: CSV</p>
+                    </div>
+                </div>
 
-</div>
+                <!-- File Preview -->
+                <div class="file-preview" id="filePreview" style="display: none;">
+                    <div class="file-icon">📄</div>
+                    <div class="file-details">
+                        <p class="file-name" id="fileName"></p>
+                        <p class="file-size" id="fileSize"></p>
+                    </div>
+                    <button type="button" class="remove-file" id="removeFile">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
 
-</form>
-<!-- original pen: https://codepen.io/roydigerhund/pen/ZQdbeN  -->
+            <!-- Upload Button -->
+            <button type="submit" class="upload-btn" name="uploadbutton" id="uploadBtn" disabled>
+                <span class="btn-text">Upload & Predict</span>
+                <span class="btn-arrow">→</span>
+            </button>
+        </div>
+    </form>
 
-<!-- NO JS ADDED YET -->
-<!-- partial -->
-  <script src='https://100dayscss.com/codepen/js/jquery.min.js'></script><script  src="./script.js"></script>
+    <script>
+        const dropzone = document.getElementById('dropzone');
+        const fileInput = document.getElementById('fileInput');
+        const filePreview = document.getElementById('filePreview');
+        const fileName = document.getElementById('fileName');
+        const fileSize = document.getElementById('fileSize');
+        const removeFile = document.getElementById('removeFile');
+        const uploadBtn = document.getElementById('uploadBtn');
 
+        // Prevent default drag behaviors
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropzone.addEventListener(eventName, preventDefaults, false);
+            document.body.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        // Highlight drop zone when item is dragged over it
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropzone.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropzone.addEventListener(eventName, unhighlight, false);
+        });
+
+        function highlight() {
+            dropzone.classList.add('drag-over');
+        }
+
+        function unhighlight() {
+            dropzone.classList.remove('drag-over');
+        }
+
+        // Handle dropped files
+        dropzone.addEventListener('drop', handleDrop, false);
+
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            handleFiles(files);
+        }
+
+        // Handle file input change
+        fileInput.addEventListener('change', function() {
+            handleFiles(this.files);
+        });
+
+        function handleFiles(files) {
+            if (files.length > 0) {
+                const file = files[0];
+                if (file.name.endsWith('.csv')) {
+                    displayFilePreview(file);
+                    uploadBtn.disabled = false;
+                } else {
+                    alert('Please upload a CSV file only!');
+                }
+            }
+        }
+
+        function displayFilePreview(file) {
+            fileName.textContent = file.name;
+            fileSize.textContent = formatFileSize(file.size);
+            filePreview.style.display = 'flex';
+            dropzone.style.display = 'none';
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i];
+        }
+
+        // Remove file
+        removeFile.addEventListener('click', function() {
+            fileInput.value = '';
+            filePreview.style.display = 'none';
+            dropzone.style.display = 'flex';
+            uploadBtn.disabled = true;
+        });
+
+        // Button loading state
+        document.querySelector('form').addEventListener('submit', function() {
+            uploadBtn.classList.add('loading');
+            uploadBtn.innerHTML = '<span class="btn-text">Uploading...</span>';
+        });
+    </script>
 </body>
 </html>
