@@ -1,4 +1,4 @@
-FROM python:3.8-slim-buster
+FROM python:3.9-slim-buster
 
 WORKDIR /app
 
@@ -24,7 +24,4 @@ RUN pip install -r requirements.txt
 
 CMD ["python3", "app.py"]
 
-# Avoid caching issues & handle errors
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends awscli \
-    && rm -rf /var/lib/apt/lists/*
+RUN pip install awscli
