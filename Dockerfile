@@ -23,3 +23,4 @@ ENV MONGO_DB_URL $MONGO_DB_URL
 RUN pip install -r requirements.txt
 
 CMD ["python3", "app.py"]
+RUN apt-get update && apt-get install -y awscli
