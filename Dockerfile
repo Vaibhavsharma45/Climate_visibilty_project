@@ -24,4 +24,7 @@ RUN pip install -r requirements.txt
 
 CMD ["python3", "app.py"]
 
-RUN apt-get update && apt-get install -y awscli
+# Avoid caching issues & handle errors
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends awscli \
+    && rm -rf /var/lib/apt/lists/*
