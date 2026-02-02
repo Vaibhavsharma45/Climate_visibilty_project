@@ -1,11 +1,84 @@
-demo
+# Git files
+.git
+.gitignore
+.gitattributes
+
+# Python cache
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info
+dist
+build
+pip-log.txt
+pip-delete-this-directory.txt
+.tox
+.coverage
+.pytest_cache
+htmlcov
+
+# Environment files
+.env
+.env.local
+.env.*.local
+*.env
+
+# Virtual environments
+venv
 env
-logs
-docs
-flowcharts
-notebooks
-testing_notebooks
-pre_project_implementation
-pred_files
-notebook
-.venv
+ENV
+virtualenv
+
+# IDE files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Documentation
+docs/
+*.md
+README.md
+
+# CI/CD
+.github
+.gitlab-ci.yml
+.travis.yml
+
+# Docker files
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Test files
+tests/
+test_*.py
+*_test.py
+
+# Logs (build them fresh in container)
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Node modules (if any)
+node_modules/
+
+# Data files (if large)
+data/
+*.csv
+*.xlsx
+*.h5

@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  climate-app:
+    build: .
+    container_name: climate-visibility-app
+    ports:
+      - "8062:8062"
+    environment:
+      # Load from .env file (NEVER commit .env to git!)
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION}
+      - MONGO_DB_URL=${MONGO_DB_URL}
+    env_file:
+      - .env
+    volumes:
+      # Mount artifacts directory for persistence
+      - ./artifacts:/app/artifacts
+      # Mount logs directory
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - climate-network
+
+networks:
+  climate-network:
+    driver: bridge
